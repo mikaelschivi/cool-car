@@ -1,0 +1,37 @@
+const mongoose = require('mongoose');
+
+const modelSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    },
+    year: {
+        type: Number,
+        required: true
+    },
+    images: {
+        type: Array,
+        required: true
+    },
+    kilometers: {
+        type: Number,
+    },
+    city: {
+        type: String
+    }
+})
+
+// {
+//     "name":"",
+//     "price":,
+//     "year":,
+//     "images":[],
+//     "kilometers":,
+//     "city":""
+// }
+
+module.exports = mongoose.model('Car', modelSchema);
